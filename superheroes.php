@@ -63,10 +63,27 @@ $superheroes = [
   ], 
 ];
 
-?>
+$result = "";
+$input = strtolower($_REQUEST["name"]);
 
+foreach($superheroes as $superhero){
+    if( $input === strtolower($superhero["alias"]) || $input === strtolower($superhero["name"]) ){
+        $info = "<h3>".$superhero["alias"]."</h3><h4>".$superhero["name"]."</h4><p>".$superhero["biography"]."</p>";
+        $result = $result.$info;
+    }
+}
+if($result != ""){
+
+}else{
+    ?>
+    
 <ul>
 <?php foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+    <?php
+}
+echo $result;
+
+?>
