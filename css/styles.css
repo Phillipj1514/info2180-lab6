@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/back.jpg");
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #002747;
+    color: #e8e8e8;
+    padding: 10px;
+}
+
+
+.search-line{
+    display: flex;
+    flex-direction: row;
+
+}
+.main-content{
+    margin: 0px 200px;
+    background-color: lightslategray;
+    height: 100%;
+    border-radius: 1%;
+    opacity: 95%;
+}
+
+.secondary-content{
+    padding: 10px;
+}
+
+.teritiary-content{
+    margin: 0px 5px;
+}
+.border-line{
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    border-radius: 0.1%;
+    margin: 3px 0px;
+}

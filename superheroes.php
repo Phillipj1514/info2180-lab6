@@ -64,7 +64,10 @@ $superheroes = [
 ];
 
 $result = "";
-$input = strtolower($_REQUEST["name"]);
+$input = strtolower($_REQUEST["query"]);
+$input = filter_var($input,FILTER_SANITIZE_STRING);
+$input = trim($input);
+if($input != "" && $_SERVER["REQUEST_METHOD"] === "GET"){
 
 foreach($superheroes as $superhero){
     if( $input === strtolower($superhero["alias"]) || $input === strtolower($superhero["name"]) ){
@@ -73,7 +76,11 @@ foreach($superheroes as $superhero){
     }
 }
 if($result != ""){
-
+    echo $result;
+}else{
+    echo "Superhero not found";
+    
+}
 }else{
     ?>
     
@@ -84,6 +91,4 @@ if($result != ""){
 </ul>
     <?php
 }
-echo $result;
-
 ?>
