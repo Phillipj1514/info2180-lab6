@@ -13,7 +13,6 @@ header{
     padding: 10px;
 }
 
-
 .search-line{
     display: flex;
     flex-direction: row;
@@ -22,9 +21,8 @@ header{
 .main-content{
     margin: 0px 200px;
     background-color: lightslategray;
-    height: 100%;
     border-radius: 1%;
-    opacity: 95%;
+    opacity: 93%;
 }
 
 .secondary-content{
@@ -40,4 +38,8 @@ header{
     border-color: lightgray;
     border-radius: 0.1%;
     margin: 3px 0px;
+}
+
+.error{
+    color: red;
 }
